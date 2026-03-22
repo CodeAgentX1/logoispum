@@ -1,0 +1,84 @@
+.categories {
+    padding: 10rem 0;
+    background-color: $color-gray-50;
+
+    @include respond(tablet) {
+        padding: 7rem 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        gap: 3rem;
+
+        @include respond(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.category-card {
+    background: $color-white;
+    padding: 4rem;
+    border-radius: 2.4rem;
+    border: 1px solid $color-gray-100;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-1rem);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border-color: transparent;
+
+        .category-card__link {
+            color: $color-secondary;
+            gap: 1.2rem;
+        }
+    }
+
+    &__icon {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3.2rem;
+        margin-bottom: 2.5rem;
+        transition: transform 0.3s ease;
+
+        &--purple { background: rgba(124, 58, 237, 0.1); color: #7C3AED; }
+        &--blue { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+        &--green { background: rgba(16, 185, 129, 0.1); color: #10B981; }
+        &--pink { background: rgba(236, 72, 153, 0.1); color: #EC4899; }
+        &--orange { background: rgba(249, 115, 22, 0.1); color: #F97316; }
+        &--red { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $color-gray-900;
+        margin-bottom: 1rem;
+    }
+
+    &__count {
+        font-size: 1.6rem;
+        color: $color-gray-500;
+        margin-bottom: 2.5rem;
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $color-gray-900;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        transition: all 0.2s ease;
+    }
+}

@@ -1,0 +1,112 @@
+.brands {
+    padding: 10rem 0;
+    background-color: $color-white;
+    overflow: hidden;
+    position: relative;
+
+    &__header {
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-size: 4rem;
+        font-weight: 800;
+        color: $color-primary;
+        
+        @media (max-width: $bp-mobile) {
+            font-size: 3rem;
+        }
+    }
+
+    &__marquee-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    &__marquee {
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        gap: 3rem;
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent
+        );
+
+        &:hover .brands__track {
+            animation-play-state: paused;
+        }
+
+        &--reverse .brands__track {
+            animation-direction: reverse;
+        }
+    }
+
+    &__track {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        min-width: 100%;
+        animation: scroll-brands 40s linear infinite;
+    }
+
+    &__card {
+        background: $color-white;
+        border: 1px solid $color-gray-100;
+        padding: 2.4rem 4rem;
+        border-radius: 1.6rem;
+        box-shadow: $shadow-sm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition-normal;
+        min-width: 22rem;
+        height: 10rem;
+
+        &:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: $shadow-lg;
+            border-color: rgba($color-secondary, 0.2);
+            
+            .brands__logo {
+                filter: grayscale(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: $bp-mobile) {
+            min-width: 160px;
+            padding: 1.6rem 3rem;
+            height: 8rem;
+        }
+    }
+
+    &__logo {
+        height: 3.5rem;
+        width: auto;
+        opacity: 0.4;
+        filter: grayscale(1);
+        transition: $transition-normal;
+        object-fit: contain;
+
+        @media (max-width: $bp-mobile) {
+            height: 2.5rem;
+        }
+    }
+}
+
+@keyframes scroll-brands {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 3rem));
+    }
+}

@@ -1,0 +1,210 @@
+.hero {
+    position: relative;
+    min-height: calc(100vh - 9rem);
+    margin-top: 9rem;
+    background: radial-gradient(circle at 10% 20%, rgba(255, 16, 83, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
+                #FFFFFF;
+    overflow: hidden;
+    @include flex-center;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+        gap: 8rem;
+        z-index: 10;
+
+        @include respond(desktop) {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 6rem;
+        }
+    }
+
+    &__content {
+        max-width: 65rem;
+
+        @include respond(desktop) {
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-size: 7.2rem;
+        font-weight: 800;
+        line-height: 1.1;
+        color: $color-primary;
+        margin-bottom: 3rem;
+        animation: slideInLeft 1s ease-out;
+
+        @include respond(tablet) {
+            font-size: 4.8rem;
+        }
+
+        .text-gradient {
+            background: $gradient-pink;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        color: $color-gray-600;
+        margin-bottom: 4.5rem;
+        line-height: 1.8;
+        animation: slideInLeft 1s ease-out 0.2s backwards;
+
+        @include respond(tablet) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        gap: 2rem;
+        animation: slideInLeft 1s ease-out 0.4s backwards;
+
+        @include respond(desktop) {
+            justify-content: center;
+        }
+
+        @include respond(mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__visual {
+        position: relative;
+        height: 50rem;
+        @include flex-center;
+
+        @include respond(desktop) {
+            height: 35rem;
+        }
+    }
+
+    // Background Ornaments
+    &__ornament {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        z-index: 1;
+        opacity: 0.5;
+
+        &--1 {
+            width: 40rem;
+            height: 40rem;
+            background: rgba($color-secondary, 0.15);
+            top: -10rem;
+            right: -10rem;
+            animation: pulse-slow 8s infinite alternate;
+        }
+
+        &--2 {
+            width: 30rem;
+            height: 30rem;
+            background: rgba(59, 130, 246, 0.1);
+            bottom: -5rem;
+            left: -5rem;
+            animation: pulse-slow 10s infinite alternate-reverse;
+        }
+
+        &--3 {
+            width: 20rem;
+            height: 20rem;
+            background: rgba($color-secondary, 0.1);
+            top: 40%;
+            left: 10%;
+            filter: blur(100px);
+        }
+    }
+}
+
+// Glassmorphism Cards
+.glass-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2.4rem;
+    padding: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    z-index: 15;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.05) !important;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    &__icon {
+        width: 5.6rem;
+        height: 5.6rem;
+        border-radius: 1.6rem;
+        background: $gradient-pink;
+        color: white;
+        @include flex-center;
+        font-size: 2.4rem;
+    }
+
+    &__info {
+        h4 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: $color-primary;
+            margin-bottom: 0.4rem;
+        }
+        p {
+            font-size: 1.4rem;
+            color: $color-gray-500;
+        }
+    }
+
+    &--1 { top: 10%; left: 10%; }
+    &--2 { top: 40%; right: 5%; }
+    &--3 { bottom: 15%; left: 20%; }
+
+    @include respond(desktop) {
+        &--1 { top: 0; left: 5%; }
+        &--2 { top: 30%; right: 0; }
+        &--3 { bottom: 0; left: 15%; }
+    }
+}
+
+// Animations
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse-slow {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(2rem, 2rem); }
+}
+
+.floating {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.floating-delayed {
+    animation: floating 5s ease-in-out infinite 0.5s;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-2rem); }
+    100% { transform: translateY(0); }
+}

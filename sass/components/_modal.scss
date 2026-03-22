@@ -1,0 +1,210 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-normal;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        .modal {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.modal {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    width: 100%;
+    max-width: 45rem;
+    padding: 4rem;
+    border-radius: 3rem;
+    box-shadow: $shadow-lg;
+    position: relative;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &__close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2.4rem;
+        color: $color-gray-500;
+        cursor: pointer;
+        background: none;
+        border: none;
+        transition: $transition-fast;
+
+        &:hover {
+            color: $color-secondary;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__header {
+        display: flex;
+        gap: 3rem;
+        border-bottom: 2px solid $color-gray-100;
+        margin-bottom: 3rem;
+    }
+
+    &__tab {
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-gray-400;
+        padding-bottom: 1.5rem;
+        cursor: pointer;
+        position: relative;
+        transition: $transition-fast;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: $gradient-pink;
+            transition: $transition-fast;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &.active {
+            color: $color-primary;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__form {
+        display: none;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        &.active {
+            display: flex;
+            animation: fadeIn 0.4s ease-out;
+        }
+    }
+
+    &__footer {
+        margin-top: 3.5rem;
+        text-align: center;
+
+        p {
+            font-size: 1.4rem;
+            color: $color-gray-500;
+            margin-bottom: 2rem;
+            position: relative;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 30%;
+                height: 1px;
+                background-color: $color-gray-200;
+            }
+
+            &::before { left: 0; }
+            &::after { right: 0; }
+        }
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $color-primary;
+    }
+
+    input {
+        height: 5.2rem;
+        padding: 0 2rem;
+        border-radius: 1.2rem;
+        border: 1px solid $color-gray-200;
+        background-color: $color-gray-50;
+        font-family: inherit;
+        font-size: 1.5rem;
+        transition: $transition-fast;
+
+        &:focus {
+            outline: none;
+            border-color: $color-secondary;
+            background-color: $color-white;
+            box-shadow: 0 0 0 4px rgba($color-secondary, 0.1);
+        }
+    }
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+
+    .forgot-link {
+        color: $color-secondary;
+        font-weight: 600;
+        &:hover { text-decoration: underline; }
+    }
+}
+
+.btn--full {
+    width: 100%;
+}
+
+.social-auth {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-btn {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 1.4rem;
+    border: 1px solid $color-gray-200;
+    background-color: $color-white;
+    font-size: 2.2rem;
+    color: $color-gray-700;
+    cursor: pointer;
+    transition: $transition-fast;
+    @include flex-center;
+
+    &:hover {
+        background-color: $color-gray-50;
+        border-color: $color-gray-300;
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(1rem); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Logo Ipsum</title>
+    <meta name="description" content="Explore our wide range of premium courses.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="../index.html" class="logo">
+                   <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#1E293B"/>
+                        <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#1E293B"/>
+                        <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#1E293B"/>
+                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B">logoipsum</text>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="header__search">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search bar" class="search-bar__input">
+                    <button class="search-bar__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <nav class="header__nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-list__item dropdown">
+                        <a href="#" class="nav-list__link dropdown-toggle">Category <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="detail-courses.html">Detail Courses</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="account.html">Account</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">Become an Mentor</a>
+                    </li>
+                </ul>
+                <div class="header__mobile-auth">
+                    <button class="btn btn--outline btn--full" id="login-btn-mobile">Login</button>
+                    <button class="btn btn--primary btn--full" id="signup-btn-mobile">Sign Up</button>
+                </div>
+            </nav>
+
+            <div class="header__auth">
+                <button class="btn btn--outline" id="login-btn">Login</button>
+                <button class="btn btn--primary" id="signup-btn">Sign Up</button>
+            </div>
+
+            <button class="header__toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="courses-page">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs reveal">
+                <a href="../index.html" class="breadcrumbs__link">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span class="breadcrumbs__current">Programming Courses</span>
+            </nav>
+
+            <!-- Category Hero -->
+            <section class="category-hero reveal">
+                <h1 class="category-hero__title">Programming Courses</h1>
+                <p class="category-hero__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus</p>
+            </section>
+
+            <!-- Course Carousel Section -->
+            <section class="carousel-section reveal">
+                <div class="carousel-section__header">
+                    <h2 class="carousel-section__title">Most Popular Development Courses</h2>
+                    <div class="carousel-section__nav">
+                        <button class="carousel-section__btn carousel-section__btn--prev" id="course-prev">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button class="carousel-section__btn carousel-section__btn--next" id="course-next">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-carousel">
+                    <div class="course-carousel__track" id="course-track">
+                        <!-- Course 1 -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Business" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">UI/UX Design</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">Interpersonal Skills - Work Better With Others!</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$384</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 2 -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 3 -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop" alt="Design" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">UX Research</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">User Experience Design Essentials - Adobe XD</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$826</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 4 -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" alt="3D Modeling" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">3D Design</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">Creating 3D Modelling In Blender</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$710</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4: Java Development -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" alt="Java Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Backend</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">Complete Java Masterclass: Zero to Hero</h3>
+                                <p class="course-card__author">Alex Johnson</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <span class="count">(1,540)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$550</span>
+                                    <span class="course-card__new-price">$620</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Mobile Dev with Flutter -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop" alt="Mobile Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Mobile Apps</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">Build Mobile Apps with Flutter & Dart</h3>
+                                <p class="course-card__author">Sarah Lee</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(3,120)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$700</span>
+                                    <span class="course-card__new-price">$840</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: UI/UX for Developers -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=2070&auto=format&fit=crop" alt="UIUX Design" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">UI/UX Design</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">UI/UX Design Essentials for Web Developers</h3>
+                                <p class="course-card__author">Michael Chen</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="count">(1,120)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$450</span>
+                                    <span class="course-card__new-price">$510</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Programming Topics Section -->
+            <section class="topics-section reveal">
+                <div class="topics-section__header">
+                    <h2 class="topics-section__title">Programming Topics</h2>
+                    <a href="#" class="btn btn--primary">See All</a>
+                </div>
+
+                <div class="topics-grid">
+                    <!-- Topic 1: Python -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop" alt="Python" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">Python</h3>
+                    </div>
+
+                    <!-- Topic 2: Javascript -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=2070&auto=format&fit=crop" alt="Javascript" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">Javascript</h3>
+                    </div>
+
+                    <!-- Topic 3: CSS -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=2071&auto=format&fit=crop" alt="CSS" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">CSS</h3>
+                    </div>
+
+                    <!-- Topic 4: C# -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=2070&auto=format&fit=crop" alt="C#" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">C#</h3>
+                    </div>
+
+                    <!-- Topic 5: Web Development -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Web Development" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">Web Development</h3>
+                    </div>
+
+                    <!-- Topic 6: Data Science -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bbbda50080ad?q=80&w=2070&auto=format&fit=crop" alt="Data Science" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">Data Science</h3>
+                    </div>
+
+                    <!-- Topic 7: Java -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" alt="Java" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">Java</h3>
+                    </div>
+
+                    <!-- Topic 8: SQL -->
+                    <div class="topic-card">
+                        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2072&auto=format&fit=crop" alt="SQL" class="topic-card__img">
+                        <div class="topic-card__overlay"></div>
+                        <h3 class="topic-card__name">SQL</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Course Listing Section -->
+            <section class="course-listing reveal">
+                <div class="course-listing__container">
+                    <!-- Filter Sidebar -->
+                    <aside class="listing-sidebar">
+                        <div class="filter-group active">
+                            <div class="filter-group__header">
+                                <h3 class="filter-group__title">Ratings</h3>
+                                <i class="fa-solid fa-chevron-down filter-group__icon"></i>
+                            </div>
+                            <div class="filter-group__content">
+                                <div class="filter-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                        <span>5</span>
+                                        <span class="count">(1242)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+                                        <span>4+</span>
+                                        <span class="count">(2145)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>
+                                        <span>3+</span>
+                                        <span class="count">(224)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <h3 class="filter-group__title">Durations</h3>
+                                <i class="fa-solid fa-chevron-down filter-group__icon"></i>
+                            </div>
+                            <div class="filter-group__content">
+                                <div class="filter-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>1-3 Hours</span>
+                                        <span class="count">(1242)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>3-6 Hours</span>
+                                        <span class="count">(2145)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>6-12 Hours</span>
+                                        <span class="count">(224)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <h3 class="filter-group__title">Categories</h3>
+                                <i class="fa-solid fa-chevron-down filter-group__icon"></i>
+                            </div>
+                            <div class="filter-group__content">
+                                <div class="filter-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Golang</span>
+                                        <span class="count">(1242)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Java</span>
+                                        <span class="count">(2145)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Flutter</span>
+                                        <span class="count">(224)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>CSS</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <h3 class="filter-group__title">Level</h3>
+                                <i class="fa-solid fa-chevron-down filter-group__icon"></i>
+                            </div>
+                            <div class="filter-group__content">
+                                <div class="filter-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Beginner</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Intermediate</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Expert</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <h3 class="filter-group__title">Language</h3>
+                                <i class="fa-solid fa-chevron-down filter-group__icon"></i>
+                            </div>
+                            <div class="filter-group__content">
+                                <div class="filter-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>English</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Espanol</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Melayu</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Bahasa Indonesia</span>
+                                        <span class="count">(2049)</span>
+                                    </label>
+                                    <button class="show-more-btn">Show more <i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <h3 class="filter-group__title">Price</h3>
+                                <i class="fa-solid fa-chevron-down filter-group__icon"></i>
+                            </div>
+                            <div class="filter-group__content">
+                                <div class="filter-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Paid Courses</span>
+                                        <span class="count">(4,500)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Free Courses</span>
+                                        <span class="count">(1,200)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>On Sale</span>
+                                        <span class="count">(850)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <h3 class="filter-group__title">Features</h3>
+                                <i class="fa-solid fa-chevron-down filter-group__icon"></i>
+                            </div>
+                            <div class="filter-group__content">
+                                <div class="filter-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Subtitles</span>
+                                        <span class="count">(3,100)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Quizzes</span>
+                                        <span class="count">(2,400)</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__box"></span>
+                                        <span>Certificates</span>
+                                        <span class="count">(4,800)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Course Grid -->
+                    <div class="listing-grid">
+                        <!-- Repeated Course Cards for Grid -->
+                        <!-- Card 1 -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4, 5, 6 for demonstration -->
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=2070&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=2062&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-card__image-box">
+                                <div class="course-card__img-container">
+                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" alt="Development" class="course-card__img">
+                                </div>
+                                <span class="course-card__badge">Web Developer</span>
+                            </div>
+                            <div class="course-card__content">
+                                <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                <p class="course-card__author">Tanah Air Team</p>
+                                <div class="course-card__rating">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="count">(2078)</span>
+                                </div>
+                                <div class="course-card__price-row">
+                                    <span class="course-card__old-price">$640</span>
+                                    <span class="course-card__new-price">$735</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination__btn pagination__btn--prev"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="pagination__btn active">1</button>
+                            <button class="pagination__btn">2</button>
+                            <button class="pagination__btn">3</button>
+                            <button class="pagination__btn">4</button>
+                            <button class="pagination__btn">5</button>
+                            <button class="pagination__btn pagination__btn--next"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="../index.html" class="logo">
+                           <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#FFFFFF"/>
+                                <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#FFFFFF"/>
+                                <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#FFFFFF"/>
+                                <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#FFFFFF">logoipsum</text>
+                            </svg>
+                        </a>
+                        <p class="footer__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet tristique placerat eleifend aliquam pellentesque facilisis ultrices. Imperdiet mus urna egestas at tellus.</p>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">About</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Mentor</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">Support</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">Company</h4>
+                        <ul>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="footer__legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms and Condition</a>
+                    </div>
+                    <div class="footer__copyright">
+                        @2020 TanahAir Studio. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal">
+            <button class="modal__close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal__header">
+                <button class="modal__tab active" data-tab="login">Login</button>
+                <button class="modal__tab" data-tab="signup">Sign Up</button>
+            </div>
+            <div class="modal__content">
+                <!-- Login Form -->
+                <form class="modal__form active" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Remember me
+                            <span class="checkmark"></span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Login to Account</button>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form class="modal__form" id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+                </form>
+            </div>
+            <div class="modal__footer">
+                <p>Or continue with</p>
+                <div class="social-auth">
+                    <button class="social-btn"><i class="fa-brands fa-google"></i></button>
+                    <button class="social-btn"><i class="fa-brands fa-apple"></i></button>
+                    <button class="social-btn"><i class="fa-brands fa-facebook"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

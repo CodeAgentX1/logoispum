@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Ipsum - Premium Learning Platform</title>
+    <meta name="description" content="Logo Ipsum is a premium learning platform for mentors and students.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="index.html" class="logo">
+                   <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#1E293B"/>
+                        <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#1E293B"/>
+                        <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#1E293B"/>
+                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B">logoipsum</text>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="header__search">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search bar" class="search-bar__input">
+                    <button class="search-bar__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <nav class="header__nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-list__item dropdown">
+                        <a href="#" class="nav-list__link dropdown-toggle">Category <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/courses.html">Courses</a></li>
+                            <li><a href="pages/detail-courses.html">Detail Courses</a></li>
+                            <li><a href="pages/blog.html">Blog</a></li>
+                            <li><a href="pages/account.html">Account</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">Become an Mentor</a>
+                    </li>
+                </ul>
+                <div class="header__mobile-auth">
+                    <button class="btn btn--outline btn--full" id="login-btn-mobile">Login</button>
+                    <button class="btn btn--primary btn--full" id="signup-btn-mobile">Sign Up</button>
+                </div>
+            </nav>
+
+            <div class="header__auth">
+                <button class="btn btn--outline" id="login-btn">Login</button>
+                <button class="btn btn--primary" id="signup-btn">Sign Up</button>
+            </div>
+
+            <button class="header__toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="feature-search">
+
+            <div class="container">
+                <div class="feature-search__inner reveal">
+                    <div class="feature-search__content">
+                        <h2 class="feature-search__title">Find the Best Courses and Amazing Mentor</h2>
+                        <p class="feature-search__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus</p>
+                        
+                        <div class="premium-search">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" placeholder="Type in the course you want to learn" class="premium-search__input">
+                            <button class="btn btn--primary premium-search__btn">Search</button>
+                        </div>
+
+                        <div class="feature-search__badges">
+                            <div class="badge-item">
+                                <span class="badge-icon"><i class="fa-solid fa-clock"></i></span>
+                                <span class="badge-text">Life Time Acces</span>
+                            </div>
+                            <div class="badge-item">
+                                <span class="badge-icon"><i class="fa-solid fa-user-check"></i></span>
+                                <span class="badge-text">Expert Mentor</span>
+                            </div>
+                            <div class="badge-item">
+                                <span class="badge-icon"><i class="fa-solid fa-play"></i></span>
+                                <span class="badge-text">100K+ Courses</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-search__visual">
+                        <div class="visual-wrapper">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" alt="Learning" class="visual-img">
+                            
+                            <!-- Floating Elements -->
+                            <div class="floating-icon floating-icon--1"><i class="fa-solid fa-bell"></i></div>
+                            <div class="floating-icon floating-icon--2"><i class="fa-solid fa-heart"></i></div>
+                            <div class="floating-icon floating-icon--3"><i class="fa-solid fa-certificate"></i></div>
+                            
+                            <div class="review-card floating-card">
+                                <h3>500+</h3>
+                                <p>Total Review</p>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Glow effect -->
+                        <div class="visual-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="courses" id="trending-courses">
+            <div class="container">
+                <div class="courses__header reveal">
+                    <h2 class="courses__title">Trending Courses</h2>
+                    <div class="courses__filters">
+                        <button class="courses__filter-btn active" data-filter="all">All</button>
+                        <button class="courses__filter-btn" data-filter="business">Business</button>
+                        <button class="courses__filter-btn" data-filter="design">Art & Design</button>
+                        <button class="courses__filter-btn" data-filter="development">Development</button>
+                        <button class="courses__filter-btn" data-filter="marketing">Marketing</button>
+                    </div>
+                </div>
+
+                <div class="courses__grid">
+                    <!-- Business Course -->
+                    <div class="course-card reveal" data-category="business">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Business" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Business</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Interpersonal Skills - Work Better With Others!</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$384</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Course -->
+                    <div class="course-card reveal" data-category="development">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Development" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Web Developer</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$735</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Course -->
+                    <div class="course-card reveal" data-category="design">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop" alt="Design" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">UX Research</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">User Experience Design Essentials - Adobe XD</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$826</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Course (Art & Design) -->
+                    <div class="course-card reveal" data-category="design">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" alt="3D Modeling" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">3D Design</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Creating 3D Modelling In Blender</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$710</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Course -->
+                    <div class="course-card reveal" data-category="marketing">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="Marketing" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Public Speaking</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">The Complete Digital Marketing Course</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$384</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Course -->
+                    <div class="course-card reveal" data-category="development">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=2062&auto=format&fit=crop" alt="Python" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Python Developer</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Complete Python Boot Camp: Go From Zero to Hero</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$758</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Course -->
+                    <div class="course-card reveal" data-category="business">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Strategy" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Business Strategy</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Business Analysis Process From Start to Finish</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$973</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Course -->
+                    <div class="course-card reveal" data-category="design">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=2070&auto=format&fit=crop" alt="UI Design" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">UI Design</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">The Complete UI/UX Design Masterclass</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$273</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses__footer reveal">
+                    <button class="btn btn--more">More Courses</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-categories" id="top-categories">
+            <div class="container">
+                <div class="top-categories__header reveal">
+                    <h2 class="top-categories__title">Top Categories</h2>
+                </div>
+
+                <div class="top-categories__grid">
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop" alt="Art & Design" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Art & Design</h3>
+                        </div>
+                    </div>
+
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Business" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Business</h3>
+                        </div>
+                    </div>
+
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1973&auto=format&fit=crop" alt="Copy Writing" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Copy Writing</h3>
+                        </div>
+                    </div>
+
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="Marketing" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Marketing</h3>
+                        </div>
+                    </div>
+
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Programming" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Programming</h3>
+                        </div>
+                    </div>
+
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop" alt="Photography" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Photography</h3>
+                        </div>
+                    </div>
+
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" alt="Videography" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Videography</h3>
+                        </div>
+                    </div>
+
+                    <div class="category-box reveal">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" alt="Personal Development" class="category-box__img">
+                        <div class="category-box__content">
+                            <h3 class="category-box__name">Personal Development</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="stats reveal">
+            <div class="container">
+                <div class="stats__grid">
+                    <!-- Courses -->
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fa-solid fa-play-circle"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="10000">0</h3>
+                        <p class="stat-card__label">Courses</p>
+                    </div>
+
+                    <!-- Students -->
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="50000">0</h3>
+                        <p class="stat-card__label">Active Students</p>
+                    </div>
+
+                    <!-- Mentors -->
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="1000">0</h3>
+                        <p class="stat-card__label">Active Mentors</p>
+                    </div>
+
+                    <!-- Countries -->
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fa-solid fa-flag"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="180">0</h3>
+                        <p class="stat-card__label">Countries</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mentor" id="become-mentor">
+            <div class="container">
+                <div class="mentor__grid">
+                    <div class="mentor__image-box reveal-left">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop" alt="Become a Mentor">
+                    </div>
+                    <div class="mentor__content reveal-right">
+                        <h2 class="mentor__title">Become an Mentor</h2>
+                        <div class="mentor__desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat eu in orci, nunc amet libero. Nam scelerisque vestibulum bibendum a turpis. Ante feugiat lectus massa, odio amet. Auctor sit mattis non id proin elit placerat. Lectus morbi amet et aliquam magna mauris.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat eu in orci, nunc amet libero. Nam scelerisque vestibulum bibendum a turpis. Ante feugiat lectus massa, odio amet. Auctor sit mattis non id proin elit placerat. Lectus morbi amet et aliquam magna mauris.</p>
+                        </div>
+                        <button class="btn btn--primary">Start Teaching</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials reveal" id="testimonials">
+            <div class="container">
+                <div class="testimonials__container">
+                    <div class="testimonials__slider">
+                        <!-- Slide 1 -->
+                        <div class="testimonials__slide active">
+                            <div class="testimonials__image-box">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop" alt="User">
+                            </div>
+                            <div class="testimonials__content">
+                                <h3 class="testimonials__quote">"After studying here I gained new knowledge and insights. The mentor was very friendly and guided me to get the knowledge I wanted. Thank you!"</h3>
+                                <div class="testimonials__author">
+                                    <span class="testimonials__name">Jessica Alva</span>
+                                    <span class="testimonials__role">Product Designer at Google</span>
+                                </div>
+                                <div class="testimonials__nav">
+                                    <button class="testimonials__btn testimonials__btn--prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <button class="testimonials__btn testimonials__btn--next"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonials__slide">
+                            <div class="testimonials__image-box">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="User">
+                            </div>
+                            <div class="testimonials__content">
+                                <h3 class="testimonials__quote">"The courses are well structured and very easy to follow. I've learned more in 3 months here than I did in a year of self-study. Highly recommended!"</h3>
+                                <div class="testimonials__author">
+                                    <span class="testimonials__name">Michael Chen</span>
+                                    <span class="testimonials__role">Senior Developer at Meta</span>
+                                </div>
+                                <div class="testimonials__nav">
+                                    <button class="testimonials__btn testimonials__btn--prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <button class="testimonials__btn testimonials__btn--next"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonials__slide">
+                            <div class="testimonials__image-box">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop" alt="User">
+                            </div>
+                            <div class="testimonials__content">
+                                <h3 class="testimonials__quote">"Amazing experience! The community is so supportive and the mentors actually care about your progress. I found my dream job thanks to this platform."</h3>
+                                <div class="testimonials__author">
+                                    <span class="testimonials__name">Sarah Johnson</span>
+                                    <span class="testimonials__role">Marketing Lead at Spotify</span>
+                                </div>
+                                <div class="testimonials__nav">
+                                    <button class="testimonials__btn testimonials__btn--prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <button class="testimonials__btn testimonials__btn--next"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands reveal" id="brands">
+            <div class="container">
+                <div class="brands__header">
+                    <h2 class="brands__title">Trusted by Company</h2>
+                </div>
+                
+                <div class="brands__marquee-container">
+                    <!-- Row 1: Left to Right (default) -->
+                    <div class="brands__marquee">
+                        <div class="brands__track">
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png" alt="Tesla" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Spotify_logo_with_text.svg" alt="Spotify" class="brands__logo"></div>
+                        </div>
+                        <!-- Duplicate for Row 1 -->
+                        <div class="brands__track">
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png" alt="Tesla" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Spotify_logo_with_text.svg" alt="Spotify" class="brands__logo"></div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Right to Left -->
+                    <div class="brands__marquee brands__marquee--reverse">
+                        <div class="brands__track">
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Belo.svg" alt="Airbnb" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" alt="Slack" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Adobe_Corporate_logo.svg" alt="Adobe" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Uber_logo_2018.svg" alt="Uber" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/PayPal_logo.svg" alt="PayPal" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Zillow_logo.svg" alt="Zillow" class="brands__logo"></div>
+                        </div>
+                        <!-- Duplicate for Row 2 -->
+                        <div class="brands__track">
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Belo.svg" alt="Airbnb" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" alt="Slack" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Adobe_Corporate_logo.svg" alt="Adobe" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Uber_logo_2018.svg" alt="Uber" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/PayPal_logo.svg" alt="PayPal" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" class="brands__logo"></div>
+                            <div class="brands__card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Zillow_logo.svg" alt="Zillow" class="brands__logo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog reveal" id="blog">
+            <div class="container">
+                <div class="blog__header">
+                    <h2 class="blog__title">The Latest Blog</h2>
+                </div>
+                <div class="blog__grid">
+                    <!-- Blog Card 1 -->
+                    <article class="blog__card">
+                        <div class="blog__img-box">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2070&auto=format&fit=crop" alt="Blog 1" class="blog__img">
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span>3, Mei 2021</span>
+                                <span>3 min read</span>
+                            </div>
+                            <h3 class="blog__post-title">10 graphic design trends to get you inspired in 2021</h3>
+                            <p class="blog__excerpt">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod.</p>
+                            <a href="#" class="blog__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog__card">
+                        <div class="blog__img-box">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop" alt="Blog 2" class="blog__img">
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span>3, Mei 2021</span>
+                                <span>3 min read</span>
+                            </div>
+                            <h3 class="blog__post-title">Right Triangle Trigonometry Explained</h3>
+                            <p class="blog__excerpt">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod.</p>
+                            <a href="#" class="blog__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog__card">
+                        <div class="blog__img-box">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1974&auto=format&fit=crop" alt="Blog 3" class="blog__img">
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span>3, Mei 2021</span>
+                                <span>3 min read</span>
+                            </div>
+                            <h3 class="blog__post-title">2 Reasons Why You’re Confusing Chemistry</h3>
+                            <p class="blog__excerpt">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod.</p>
+                            <a href="#" class="blog__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="index.html" class="logo">
+                           <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#FFFFFF"/>
+                                <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#FFFFFF"/>
+                                <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#FFFFFF"/>
+                                <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#FFFFFF">logoipsum</text>
+                            </svg>
+                        </a>
+                        <p class="footer__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet tristique placerat eleifend aliquam pellentesque facilisis ultrices. Imperdiet mus urna egestas at tellus.</p>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">About</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Mentor</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">Support</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">Company</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Code of Conduct</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="footer__legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms and Condition</a>
+                    </div>
+                    <div class="footer__copyright">
+                        @2020 TanahAir Studio. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal">
+            <button class="modal__close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal__header">
+                <button class="modal__tab active" data-tab="login">Login</button>
+                <button class="modal__tab" data-tab="signup">Sign Up</button>
+            </div>
+            <div class="modal__content">
+                <!-- Login Form -->
+                <form class="modal__form active" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Remember me
+                            <span class="checkmark"></span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Login to Account</button>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form class="modal__form" id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+                </form>
+            </div>
+            <div class="modal__footer">
+                <p>Or continue with</p>
+                <div class="social-auth">
+                    <button class="social-btn"><i class="fa-brands fa-google"></i></button>
+                    <button class="social-btn"><i class="fa-brands fa-apple"></i></button>
+                    <button class="social-btn"><i class="fa-brands fa-facebook"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

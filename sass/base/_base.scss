@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+    scroll-behavior: smooth;
+
+    @include respond(desktop) {
+        font-size: 56.25%; // 1rem = 9px
+    }
+
+    @include respond(tablet) {
+        font-size: 50%; // 1rem = 8px
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: $font-primary;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-gray-700;
+    background-color: $color-white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}

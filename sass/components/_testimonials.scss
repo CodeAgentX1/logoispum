@@ -1,0 +1,162 @@
+.testimonials {
+    padding: 10rem 0;
+    background-color: #F9FAFB;
+    overflow: hidden;
+    position: relative;
+
+    &__container {
+        position: relative;
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+
+    &__slider {
+        position: relative;
+        height: 45rem; // Fixed height to prevent jumping
+        
+        @media (max-width: $bp-tablet) {
+            height: auto;
+            min-height: 50rem;
+        }
+    }
+
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+        gap: 6rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(50px);
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        @media (max-width: $bp-tablet) {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 3rem;
+            position: relative; // For mobile stack
+            display: none; // Hide non-active slides
+            
+            &.active {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__image-box {
+        position: relative;
+        border-radius: 2rem;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+        box-shadow: $shadow-lg;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2rem;
+            left: -2rem;
+            width: 12rem;
+            height: 12rem;
+            background-image: radial-gradient(circle, $color-gray-300 2px, transparent 2px);
+            background-size: 1.5rem 1.5rem;
+            z-index: -1;
+            opacity: 0.5;
+        }
+    }
+
+    &__content {
+        @media (max-width: $bp-tablet) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__quote {
+        font-family: $font-secondary;
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: $color-primary;
+        line-height: 1.4;
+        margin-bottom: 3.2rem;
+        position: relative;
+
+        @media (max-width: $bp-mobile) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__author {
+        margin-top: auto;
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-primary;
+        display: block;
+    }
+
+    &__role {
+        font-size: 1.6rem;
+        color: $color-gray-500;
+        display: block;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 2rem;
+        margin-top: 4rem;
+
+        @media (max-width: $bp-tablet) {
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: $color-white;
+        border: 1px solid $color-gray-200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: $color-primary;
+        transition: $transition-fast;
+        box-shadow: $shadow-sm;
+
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-white;
+            border-color: $color-secondary;
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Decoration
+.testimonials__dots {
+    position: absolute;
+    bottom: 5rem;
+    left: 10%;
+    z-index: -1;
+    opacity: 0.2;
+}

@@ -1,0 +1,26 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: $bp-mobile) { @content; }
+    }
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: $bp-tablet) { @content; }
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: $bp-desktop) { @content; }
+    }
+    @if $breakpoint == large {
+        @media only screen and (max-width: $bp-large) { @content; }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

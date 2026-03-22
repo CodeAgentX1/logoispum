@@ -1,0 +1,263 @@
+.courses-page {
+    padding-top: 4rem;
+    background-color: #FFFFFF;
+
+    .breadcrumbs {
+        margin-bottom: 4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.4rem;
+        color: #6B7280;
+
+        &__link {
+            color: #6B7280;
+            transition: $transition-fast;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+
+        &__current {
+            color: #2D3E50;
+            font-weight: 600;
+        }
+
+        i {
+            font-size: 1rem;
+            margin: 0 0.5rem;
+        }
+    }
+
+    .category-hero {
+        margin-bottom: 6rem;
+
+        &__title {
+            font-family: $font-secondary;
+            font-size: 6.4rem;
+            font-weight: 800;
+            color: #2D3E50;
+            margin-bottom: 2.4rem;
+            line-height: 1.1;
+
+            @media (max-width: $bp-tablet) {
+                font-size: 4.8rem;
+            }
+
+            @media (max-width: $bp-mobile) {
+                font-size: 3.6rem;
+            }
+        }
+
+        &__desc {
+            font-size: 1.8rem;
+            color: #6B7280;
+            line-height: 1.8;
+            max-width: 80rem;
+
+            @media (max-width: $bp-mobile) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .carousel-section {
+        margin-bottom: 10rem;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+
+            @media (max-width: $bp-mobile) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2rem;
+            }
+        }
+
+        &__title {
+            font-family: $font-secondary;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #2D3E50;
+
+            @media (max-width: $bp-mobile) {
+                font-size: 2.4rem;
+            }
+        }
+
+        &__nav {
+            display: flex;
+            gap: 1.6rem;
+        }
+
+        &__btn {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #2D3E50;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+            &:hover {
+                background: $color-secondary;
+                color: #FFFFFF;
+                border-color: $color-secondary;
+                transform: scale(1.1);
+            }
+
+            &--next {
+                background: $color-secondary;
+                color: #FFFFFF;
+                border-color: $color-secondary;
+
+                &:hover {
+                    background: darken($color-secondary, 5%);
+                }
+            }
+        }
+    }
+
+    .course-carousel {
+        position: relative;
+        overflow: hidden;
+        margin: 0 -1.5rem;
+        padding: 1.5rem;
+
+        &__track {
+            display: flex;
+            gap: 3rem;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            .course-card {
+                flex: 0 0 calc(25% - 2.25rem);
+                min-width: 30rem;
+
+                @media (max-width: $bp-desktop) {
+                    flex: 0 0 calc(33.333% - 2rem);
+                }
+
+                @media (max-width: $bp-tablet) {
+                    flex: 0 0 calc(50% - 1.5rem);
+                }
+
+                @media (max-width: $bp-mobile) {
+                    flex: 0 0 85%;
+                }
+            }
+        }
+    }
+
+    .topics-section {
+        margin-bottom: 10rem;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+
+            @media (max-width: $bp-mobile) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2rem;
+            }
+        }
+
+        &__title {
+            font-family: $font-secondary;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #2D3E50;
+        }
+
+        .btn {
+            padding: 1.2rem 3.5rem;
+            border-radius: 0.8rem;
+        }
+    }
+
+    .topics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+
+        @media (max-width: $bp-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: $bp-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .topic-card {
+        position: relative;
+        height: 36rem;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        cursor: pointer;
+        transition: $transition-normal;
+
+        @media (max-width: $bp-tablet) {
+            height: 28rem;
+        }
+
+        @media (max-width: $bp-mobile) {
+            height: 22rem;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+            .topic-card__img {
+                transform: scale(1.1);
+            }
+
+            .topic-card__overlay {
+                background: rgba(45, 62, 80, 0.4);
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(45, 62, 80, 0.35); // Base overlay for readability
+            transition: background 0.3s ease;
+            z-index: 1;
+        }
+
+        &__name {
+            position: absolute;
+            bottom: 3rem;
+            left: 3rem;
+            color: #FFFFFF;
+            font-size: 2.4rem;
+            font-weight: 700;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    }
+}

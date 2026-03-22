@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Courses - Logoispum</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Header -->
+</head>
+<body>
+    <header class="header header--transparent" id="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="../index.html" class="logo">
+                   <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#1E293B"/>
+                        <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#1E293B"/>
+                        <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#1E293B"/>
+                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B">logoipsum</text>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="header__search">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search bar" class="search-bar__input">
+                    <button class="search-bar__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <nav class="header__nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-list__item dropdown">
+                        <a href="#" class="nav-list__link dropdown-toggle">Category <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="detail-courses.html">Detail Courses</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="account.html">Account</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">Become an Mentor</a>
+                    </li>
+                </ul>
+                <div class="header__mobile-auth">
+                    <button class="btn btn--outline btn--full" id="login-btn-mobile">Login</button>
+                    <button class="btn btn--primary btn--full" id="signup-btn-mobile">Sign Up</button>
+                </div>
+            </nav>
+
+            <div class="header__auth">
+                <button class="btn btn--outline" id="login-btn">Login</button>
+                <button class="btn btn--primary" id="signup-btn">Sign Up</button>
+            </div>
+
+            <button class="header__toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Course Hero Section -->
+        <section class="course-hero">
+            <!-- Video Background -->
+            <div class="course-hero__video-wrap">
+                <video autoplay muted loop playsinline class="course-hero__video">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-grid-of-light-dots-in-motion-42544-large.mp4" type="video/mp4">
+                </video>
+                <div class="course-hero__overlay"></div>
+            </div>
+
+            <div class="container">
+                <div class="course-hero__content">
+                    <!-- Breadcrumbs -->
+                    <nav class="course-hero__breadcrumbs reveal">
+                        <a href="../index.html">Home</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <a href="courses.html">Programming Courses</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <span>How to become an Expert Web Developer</span>
+                    </nav>
+
+                    <h1 class="course-hero__title reveal">How to become an Expert Web Developer</h1>
+
+                    <div class="course-hero__meta reveal">
+                        <div class="course-hero__rating">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="rating-val">4.7/5</span>
+                            <span class="reviews">(1023 Reviews)</span>
+                        </div>
+                        <div class="course-hero__students">
+                            <i class="fa-solid fa-users"></i>
+                            <span>20327 Students</span>
+                        </div>
+                    </div>
+
+                    <div class="course-hero__instructor reveal">
+                        <div class="avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Pak Arif Satria">
+                        </div>
+                        <div class="info">
+                            <span class="name">Pak Arif Satria Kecek ulalala</span>
+                        </div>
+                    </div>
+
+                    <div class="course-hero__actions reveal">
+                        <button class="btn btn--wishlist">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Add To Wishlist</span>
+                        </button>
+                        <button class="btn btn--share">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Main Content Section -->
+        <section class="course-main section-padding">
+            <div class="container">
+                <div class="course-main__grid">
+                    <!-- Course Content (Left) -->
+                    <div class="course-content">
+                        <!-- About Course -->
+                        <div class="course-section">
+                            <h2 class="course-section__title">About this Course</h2>
+                            <div class="course-section__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+
+                        <!-- What you'll learn -->
+                        <div class="course-section bg-light">
+                            <h2 class="course-section__title">What you'll learn</h2>
+                            <ul class="learn-list">
+                                <li><i class="fa-solid fa-check"></i> <span>Build amazing websites with HTML, CSS and JS</span></li>
+                                <li><i class="fa-solid fa-check"></i> <span>Modern CSS technics like Flexbox and Grid</span></li>
+                                <li><i class="fa-solid fa-check"></i> <span>Responsive design and mobile-first approach</span></li>
+                                <li><i class="fa-solid fa-check"></i> <span>Mastering JavaScript from scratch</span></li>
+                                <li><i class="fa-solid fa-check"></i> <span>React basics and advanced concepts</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Module Courses Accordion -->
+                        <div class="course-section">
+                            <div class="modules-header">
+                                <h2 class="course-section__title">Module Courses</h2>
+                                <span class="modules-stats">24 Modules - 124 Lectures - 24 h 12m</span>
+                            </div>
+
+                            <div class="accordion">
+                                <!-- Item 1 (Active) -->
+                                <div class="accordion__item active">
+                                    <div class="accordion__header">
+                                        <span class="accordion__title">Introducing to Web Development</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <ul class="lesson-list">
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">Welcome!</span>
+                                                </div>
+                                                <span class="time">01:24</span>
+                                            </li>
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-file-lines icon-doc"></i>
+                                                    <span class="lesson-name">Syllabus download</span>
+                                                </div>
+                                                <span class="time">01:24</span>
+                                            </li>
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-file-lines icon-doc"></i>
+                                                    <span class="lesson-name">Courses resources</span>
+                                                </div>
+                                                <span class="time">01:24</span>
+                                            </li>
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-file-lines icon-doc"></i>
+                                                    <span class="lesson-name">Join online group classes</span>
+                                                </div>
+                                                <span class="time">01:24</span>
+                                            </li>
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">How do website actually work?</span>
+                                                </div>
+                                                <span class="time">01:24</span>
+                                            </li>
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">What is Internet?</span>
+                                                </div>
+                                                <span class="time">01:24</span>
+                                            </li>
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-file-lines icon-doc"></i>
+                                                    <span class="lesson-name">Download 10 rules code</span>
+                                                </div>
+                                                <span class="time">01:24</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Item 2 -->
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <span class="accordion__title">How the Internet works</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <ul class="lesson-list">
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">The IP address</span>
+                                                </div>
+                                                <span class="time">04:32</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Item 3 -->
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <span class="accordion__title">Introducing HTML</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <ul class="lesson-list">
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">HTML Tags and Attributes</span>
+                                                </div>
+                                                <span class="time">08:15</span>
+                                            </li>
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-file-lines icon-doc"></i>
+                                                    <span class="lesson-name">HTML Elements Exercise</span>
+                                                </div>
+                                                <span class="time">03:45</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Item 4 -->
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <span class="accordion__title">Intermediate HTML</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <ul class="lesson-list">
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">Forms and Validations</span>
+                                                </div>
+                                                <span class="time">12:30</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Item 5 -->
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <span class="accordion__title">Introducing CSS</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <ul class="lesson-list">
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">CSS Selectors Basics</span>
+                                                </div>
+                                                <span class="time">09:10</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Item 6 -->
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <span class="accordion__title">Intermediate CSS</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <ul class="lesson-list">
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">Flexbox Layouts</span>
+                                                </div>
+                                                <span class="time">15:20</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Item 7 -->
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <span class="accordion__title">Introduction Bootstrap</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <ul class="lesson-list">
+                                            <li>
+                                                <div class="lesson-info">
+                                                    <i class="fa-solid fa-circle-play icon-play"></i>
+                                                    <span class="lesson-name">Bootstrap Grid System</span>
+                                                </div>
+                                                <span class="time">18:45</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn--primary btn--full btn--large btn--modules">17 More Modules</button>
+                        </div>
+
+                        </div> <!-- Closing course-content -->
+
+                        <!-- Course Sidebar (Right) -->
+                        <aside class="course-sidebar">
+                            <div class="sidebar-card">
+                                <div class="sidebar-card__video">
+                                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Course Preview">
+                                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                                    <span class="preview-text">Preview this course</span>
+                                </div>
+                                
+                                <div class="sidebar-card__content">
+                                    <div class="sidebar-card__price">
+                                        <span class="current">$49.99</span>
+                                        <span class="old">$89.99</span>
+                                        <span class="discount">45% OFF</span>
+                                    </div>
+                                    
+                                    <button class="btn btn--primary btn--full btn--large">Enroll Now</button>
+                                    <button class="btn btn--outline btn--full">Buy Now</button>
+                                    
+                                    <div class="sidebar-card__features">
+                                        <h4>This course includes:</h4>
+                                        <ul>
+                                            <li><i class="fa-solid fa-infinity"></i> Full lifetime access</li>
+                                            <li><i class="fa-solid fa-mobile-screen"></i> Access on mobile and TV</li>
+                                            <li><i class="fa-solid fa-file-lines"></i> 15 Assignments</li>
+                                            <li><i class="fa-solid fa-certificate"></i> Certificate of completion</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="sidebar-card__share">
+                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div> <!-- Closing course-main__grid -->
+
+                    <!-- Full Width Sections (Feedback, Reviews, Instructor) -->
+                    <div class="course-extra">
+                        <!-- Feedback Section -->
+                        <div class="course-section">
+                            <h2 class="course-section__title">Feedback</h2>
+                            <div class="feedback-summary">
+                                <div class="feedback-summary__avg">
+                                    <div class="number">5.0</div>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="label">Course Rating</div>
+                                </div>
+                                <div class="feedback-summary__bars">
+                                    <div class="bar-item">
+                                        <div class="bar-wrap">
+                                            <div class="bar-fill" style="width: 100%;"></div>
+                                        </div>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="count">500 Reviews</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-wrap">
+                                            <div class="bar-fill" style="width: 75%;"></div>
+                                        </div>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="count">214 Reviews</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-wrap">
+                                            <div class="bar-fill" style="width: 60%;"></div>
+                                        </div>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="count">151 Reviews</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-wrap">
+                                            <div class="bar-fill" style="width: 40%;"></div>
+                                        </div>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="count">51 Reviews</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-wrap">
+                                            <div class="bar-fill" style="width: 20%;"></div>
+                                        </div>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="count">21 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews Section -->
+                        <div class="course-section">
+                            <div class="reviews-header">
+                                <h2 class="course-section__title">Reviews</h2>
+                                <button class="btn btn--secondary btn--dropdown">
+                                    All Ratings <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+
+                            <div class="reviews-list">
+                                <!-- User 1 -->
+                                <div class="review-item">
+                                    <div class="review-item__header">
+                                        <div class="user-info">
+                                            <div class="avatar"></div>
+                                            <div class="details">
+                                                <h4 class="name">Mas Ehan</h4>
+                                                <div class="rating-time">
+                                                    <div class="stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span class="time">2 month ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review-actions">
+                                            <button><i class="fa-regular fa-thumbs-up"></i></button>
+                                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                                        </div>
+                                    </div>
+                                    <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae non id interdum massa enim posuere. Tempus, risus varius rhoncus ipsum, sed egestas nisi pellentesque. Sapien quam varius euismod in velit diam posuere netus nec. A consectetur nec ac sed convallis adipiscing. Aenean enim cursus a mattis ac velit, quis. Nibh id dui, justo, at tempus. Mauris egestas nunc morbi dignissim.</p>
+                                </div>
+
+                                <!-- User 2 -->
+                                <div class="review-item">
+                                    <div class="review-item__header">
+                                        <div class="user-info">
+                                            <div class="avatar"></div>
+                                            <div class="details">
+                                                <h4 class="name">Malik</h4>
+                                                <div class="rating-time">
+                                                    <div class="stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span class="time">2 month ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review-actions">
+                                            <button><i class="fa-regular fa-thumbs-up"></i></button>
+                                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                                        </div>
+                                    </div>
+                                    <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae non id interdum massa enim posuere. Tempus, risus varius rhoncus ipsum, sed egestas nisi pellentesque. Sapien quam varius euismod in velit diam posuere netus nec. A consectetur nec ac sed convallis adipiscing. Aenean enim cursus a mattis ac velit, quis. Nibh id dui, justo, at tempus. Mauris egestas nunc morbi dignissim.</p>
+                                </div>
+
+                                <!-- User 3 -->
+                                <div class="review-item">
+                                    <div class="review-item__header">
+                                        <div class="user-info">
+                                            <div class="avatar"></div>
+                                            <div class="details">
+                                                <h4 class="name">Pakjoo</h4>
+                                                <div class="rating-time">
+                                                    <div class="stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span class="time">2 month ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review-actions">
+                                            <button><i class="fa-regular fa-thumbs-up"></i></button>
+                                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                                        </div>
+                                    </div>
+                                    <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae non id interdum massa enim posuere. Tempus, risus varius rhoncus ipsum, sed egestas nisi pellentesque. Sapien quam varius euismod in velit diam posuere netus nec. A consectetur nec ac sed convallis adipiscing. Aenean enim cursus a mattis ac velit, quis. Nibh id dui, justo, at tempus. Mauris egestas nunc morbi dignissim.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn--secondary btn--full btn--large">More Reviews</button>
+                        </div>
+
+                       
+                    </div>
+
+                    <!-- More Courses Section -->
+                    <div class="course-section more-courses">
+                        <h2 class="course-section__title">More Courses From Arif Kecek</h2>
+                        <div class="courses__grid">
+                            <!-- Card 1 -->
+                            <div class="course-card">
+                                <div class="course-card__image-box">
+                                    <div class="course-card__img-container">
+                                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=2070&auto=format&fit=crop" alt="Course" class="course-card__img">
+                                    </div>
+                                    <span class="course-card__badge">UI/UX Design</span>
+                                </div>
+                                <div class="course-card__content">
+                                    <h3 class="course-card__title">Interpersonal Skills - Work Better With Others!</h3>
+                                    <p class="course-card__author">Tanah Air Team</p>
+                                    <div class="course-card__rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="count">(2078)</span>
+                                    </div>
+                                    <div class="course-card__price-row">
+                                        <span class="course-card__old-price">$640</span>
+                                        <span class="course-card__new-price">$384</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="course-card">
+                                <div class="course-card__image-box">
+                                    <div class="course-card__img-container">
+                                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Course" class="course-card__img">
+                                    </div>
+                                    <span class="course-card__badge">Web Developer</span>
+                                </div>
+                                <div class="course-card__content">
+                                    <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                                    <p class="course-card__author">Tanah Air Team</p>
+                                    <div class="course-card__rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="count">(2078)</span>
+                                    </div>
+                                    <div class="course-card__price-row">
+                                        <span class="course-card__old-price">$640</span>
+                                        <span class="course-card__new-price">$735</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="course-card">
+                                <div class="course-card__image-box">
+                                    <div class="course-card__img-container">
+                                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Course" class="course-card__img">
+                                    </div>
+                                    <span class="course-card__badge">UX Research</span>
+                                </div>
+                                <div class="course-card__content">
+                                    <h3 class="course-card__title">User Experience Design Essentials</h3>
+                                    <p class="course-card__author">Tanah Air Team</p>
+                                    <div class="course-card__rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="count">(2078)</span>
+                                    </div>
+                                    <div class="course-card__price-row">
+                                        <span class="course-card__old-price">$640</span>
+                                        <span class="course-card__new-price">$826</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="course-card">
+                                <div class="course-card__image-box">
+                                    <div class="course-card__img-container">
+                                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop" alt="Course" class="course-card__img">
+                                    </div>
+                                    <span class="course-card__badge">3D Design</span>
+                                </div>
+                                <div class="course-card__content">
+                                    <h3 class="course-card__title">Creating 3D Modelling In Blender</h3>
+                                    <p class="course-card__author">Tanah Air Team</p>
+                                    <div class="course-card__rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="count">(2078)</span>
+                                    </div>
+                                    <div class="course-card__price-row">
+                                        <span class="course-card__old-price">$640</span>
+                                        <span class="course-card__new-price">$710</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="../index.html" class="logo">
+                           <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#FFFFFF"/>
+                                <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#FFFFFF"/>
+                                <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#FFFFFF"/>
+                                <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#FFFFFF">logoipsum</text>
+                            </svg>
+                        </a>
+                        <p class="footer__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet tristique placerat eleifend aliquam pellentesque facilisis ultrices. Imperdiet mus urna egestas at tellus.</p>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">About</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="#">Mentor</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">Support</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__title">Company</h4>
+                        <ul>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="footer__legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms and Condition</a>
+                    </div>
+                    <div class="footer__copyright">
+                        @2020 TanahAir Studio. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal">
+            <button class="modal__close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal__header">
+                <button class="modal__tab active" data-tab="login">Login</button>
+                <button class="modal__tab" data-tab="signup">Sign Up</button>
+            </div>
+            <div class="modal__content">
+                <!-- Login Form -->
+                <form class="modal__form active" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Remember me
+                            <span class="checkmark"></span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Login to Account</button>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form class="modal__form" id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+                </form>
+            </div>
+            <div class="modal__footer">
+                <p>Or continue with</p>
+                <div class="social-auth">
+                    <button class="social-btn"><i class="fa-brands fa-google"></i></button>
+                    <button class="social-btn"><i class="fa-brands fa-apple"></i></button>
+                    <button class="social-btn"><i class="fa-brands fa-facebook"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

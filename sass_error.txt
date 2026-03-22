@@ -1,0 +1,224 @@
+﻿node.exe : DEPRECATION 
+WARNING [import]: Sass 
+@import rules are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecifi    ed: 
+(DEPRECATION W    AR...art 
+Sass 3.0.    0.:String) 
+[], Rem    oteException
+    + FullyQualifiedEr    
+rorId : NativeComm    
+andError
+ 
+
+More info and automated 
+migrator: https://sass-lang
+.com/d/import
+
+  тХ╖
+1 тФВ @import 
+'abstracts/variables';
+  тФВ         
+^^^^^^^^^^^^^^^^^^^^^
+  тХ╡
+    sass\main.scss 1:9  
+root stylesheet
+
+DEPRECATION WARNING 
+[import]: Sass @import 
+rules are deprecated and 
+will be removed in Dart 
+Sass 3.0.0.
+
+More info and automated 
+migrator: https://sass-lang
+.com/d/import
+
+  тХ╖
+2 тФВ @import 
+'abstracts/mixins';
+  тФВ         
+^^^^^^^^^^^^^^^^^^
+  тХ╡
+    sass\main.scss 2:9  
+root stylesheet
+
+DEPRECATION WARNING 
+[import]: Sass @import 
+rules are deprecated and 
+will be removed in Dart 
+Sass 3.0.0.
+
+More info and automated 
+migrator: https://sass-lang
+.com/d/import
+
+  тХ╖
+4 тФВ @import 'base/base';
+  тФВ         ^^^^^^^^^^^
+  тХ╡
+    sass\main.scss 4:9  
+root stylesheet
+
+DEPRECATION WARNING 
+[import]: Sass @import 
+rules are deprecated and 
+will be removed in Dart 
+Sass 3.0.0.
+
+More info and automated 
+migrator: https://sass-lang
+.com/d/import
+
+  тХ╖
+5 тФВ @import 
+'layout/grid';
+  тФВ         ^^^^^^^^^^^^^
+  тХ╡
+    sass\main.scss 5:9  
+root stylesheet
+
+DEPRECATION WARNING 
+[import]: Sass @import 
+rules are deprecated and 
+will be removed in Dart 
+Sass 3.0.0.
+
+More info and automated 
+migrator: https://sass-lang
+.com/d/import
+
+  тХ╖
+6 тФВ @import 'pages/home';
+  тФВ         ^^^^^^^^^^^^
+  тХ╡
+    sass\main.scss 6:9  
+root stylesheet
+
+DEPRECATION WARNING 
+[global-builtin]: Global 
+built-in functions are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated 
+migrator: https://sass-lang
+.com/d/import
+
+   тХ╖
+99 тФВ             
+background: 
+darken(#FF1053, 5%);
+   тФВ                     
+    ^^^^^^^^^^^^^^^^^^^
+   тХ╡
+    sass\components\_course
+s.scss 99:25  @import
+    sass\main.scss 16:9    
+              root 
+stylesheet
+
+DEPRECATION WARNING 
+[color-functions]: 
+darken() is deprecated. 
+Suggestions:
+
+color.scale($color, 
+$lightness: -9.4095940959%)
+color.adjust($color, 
+$lightness: -5%)
+
+More info: https://sass-lan
+g.com/d/color-functions
+
+   тХ╖
+99 тФВ             
+background: 
+darken(#FF1053, 5%);
+   тФВ                     
+    ^^^^^^^^^^^^^^^^^^^
+   тХ╡
+    sass\components\_course
+s.scss 99:25  @import
+    sass\main.scss 16:9    
+              root 
+stylesheet
+
+DEPRECATION WARNING 
+[global-builtin]: Global 
+built-in functions are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated 
+migrator: https://sass-lang
+.com/d/import
+
+    тХ╖
+125 тФВ                    
+ background: 
+darken($color-secondary, 
+5%);
+    тФВ                    
+             ^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+    тХ╡
+    sass\components\_course
+s_page.scss 125:33  @import
+    sass\main.scss 23:9    
+                    root 
+stylesheet
+
+DEPRECATION WARNING 
+[color-functions]: 
+darken() is deprecated. 
+Suggestions:
+
+color.scale($color, 
+$lightness: -9.4095940959%)
+color.adjust($color, 
+$lightness: -5%)
+
+More info: https://sass-lan
+g.com/d/color-functions
+
+    тХ╖
+125 тФВ                    
+ background: 
+darken($color-secondary, 
+5%);
+    тФВ                    
+             ^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+    тХ╡
+    sass\components\_course
+s_page.scss 125:33  @import
+    sass\main.scss 23:9    
+                    root 
+stylesheet
+
+Error: Undefined variable.
+   тХ╖
+44 тФВ             
+transition: 
+v.$transition-base;
+   тФВ                     
+    ^^^^^^^^^^^^^^^^^^
+   тХ╡
+  sass\components\_course_d
+etail.scss 44:25  @import
+  sass\main.scss 25:9      
+                  root 
+stylesheet
