@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sticky Header on Scroll
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 80) {
+            header.classList.add('scrolled');
             header.classList.add('header--scrolled');
         } else {
+            header.classList.remove('scrolled');
             header.classList.remove('header--scrolled');
         }
     });
@@ -76,15 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Course detail interactivity has been simplified.
     });
 
-    // Header Scroll Effect
-    const header2 = document.querySelector('.header'); // Renamed to avoid conflict with existing 'header'
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header2?.classList.add('scrolled');
-        } else {
-            header2?.classList.remove('scrolled');
-        }
-    });
+    // Header Scroll Effect - Handled above in DOMContentLoaded
 
     // Intersection Observer for Reveal Animations
     const revealOptions = {

@@ -14,15 +14,15 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <header class="header" id="header">
+    <header class="header header--transparent header--blog" id="header">
         <div class="container header__container">
             <div class="header__logo">
                 <a href="../index.html" class="logo">
                    <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#1E293B"/>
-                        <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#1E293B"/>
-                        <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#1E293B"/>
-                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B">logoipsum</text>
+                        <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#FFFFFF"/>
+                        <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#FFFFFF"/>
+                        <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#FFFFFF"/>
+                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#FFFFFF">logoipsum</text>
                     </svg>
                 </a>
             </div>
@@ -67,10 +67,97 @@
     </header>
 
     <main>
+        <!-- Blog Hero Section -->
+        <section class="hero-blog">
+            <div class="container">
+                <div class="hero-blog__content">
+                    <nav class="breadcrumb">
+                        <a href="../index.html">Home</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <span>Blog</span>
+                    </nav>
+                    <h1 class="hero-blog__title">Latest Blog</h1>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
-            <section style="padding: 10rem 0; text-align: center;">
-                <h1 style="font-size: 4rem; margin-bottom: 2rem;">Blog Page</h1>
-                <p style="font-size: 1.8rem; color: #666;">Content for the blog will be added here.</p>
+            <section class="blog-posts" style="padding: 10rem 0;">
+                <div class="blog-list">
+                    <!-- Blog Card 1 -->
+                    <article class="blog-card--horizontal reveal-left">
+                        <div class="blog__img-box">
+                            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=2070&auto=format&fit=crop" alt="UI/UX Design" class="blog__img">
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span><i class="fa-regular fa-calendar"></i> 12 March 2024</span>
+                                <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h2 class="blog__post-title">10 Essential Tips for Mastering Modern UI/UX Design</h2>
+                            <p class="blog__excerpt">Discover the core principles of creating intuitive and visually stunning user interfaces. From color theory to accessibility audits, we cover the top trends that are shaping the design world today and how you can apply them to your projects.</p>
+                            <a href="detail-courses.html" class="btn btn--read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog-card--horizontal reveal-right">
+                        <div class="blog__img-box">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" alt="Career Success" class="blog__img">
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span><i class="fa-regular fa-calendar"></i> 18 March 2024</span>
+                                <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h2 class="blog__post-title">Why Continuous Learning is the Secret to Career Success</h2>
+                            <p class="blog__excerpt">In an ever-changing job market, staying relevant means never stopping your education. We explore how developing a growth mindset and dedicating just 30 minutes a day to learning new skills can transform your career path and open new doors.</p>
+                            <a href="detail-courses.html" class="btn btn--read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog-card--horizontal reveal-left">
+                        <div class="blog__img-box">
+                            <img src="https://images.unsplash.com/photo-1501503069356-3c6b82a17d89?q=80&w=2070&auto=format&fit=crop" alt="Online Education" class="blog__img">
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span><i class="fa-regular fa-calendar"></i> 20 March 2024</span>
+                                <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h2 class="blog__post-title">The Future of Online Education: Trends to Watch in 2024</h2>
+                            <p class="blog__excerpt">From AI-driven tutoring to immersive VR classrooms, the landscape of digital learning is evolving rapidly. Join us as we dive into the most exciting technological advancements that are making education more accessible and engaging than ever before.</p>
+                            <a href="detail-courses.html" class="btn btn--read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 -->
+                    <article class="blog-card--horizontal reveal-right">
+                        <div class="blog__img-box">
+                            <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=2070&auto=format&fit=crop" alt="Remote Learning" class="blog__img">
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span><i class="fa-regular fa-calendar"></i> 22 March 2024</span>
+                                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h2 class="blog__post-title">Building a Productive Remote Learning Environment</h2>
+                            <p class="blog__excerpt">Struggling to stay focused while learning from home? We share practical advice on setting up your workspace, managing your time, and creating a routine that maximizes your productivity without leading to burnout.</p>
+                            <a href="detail-courses.html" class="btn btn--read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <div class="pagination__item active">1</div>
+                    <div class="pagination__item">2</div>
+                    <div class="pagination__item">3</div>
+                    <div class="pagination__item">4</div>
+                    <div class="pagination__item">5</div>
+                    <div class="pagination__item"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
             </section>
         </div>
     </main>

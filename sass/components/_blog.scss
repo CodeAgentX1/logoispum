@@ -98,4 +98,228 @@
             gap: 1.2rem;
         }
     }
+
+    // Horizontal List Version
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+
+    &-card--horizontal {
+        display: flex;
+        background-color: $color-white;
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: $shadow-sm;
+        transition: $transition-normal;
+
+        &:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: $shadow-md;
+        }
+
+        .blog__img-box {
+            flex: 0 0 40%;
+            height: 32rem;
+
+            @include respond(tablet) {
+                height: 28rem;
+            }
+        }
+
+        .blog__content {
+            flex: 1;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include respond(tablet) {
+                padding: 3rem;
+            }
+        }
+
+        .blog__post-title {
+            font-size: 3.2rem;
+            margin-bottom: 2.4rem;
+
+            @include respond(tablet) {
+                font-size: 2.6rem;
+            }
+        }
+
+        .blog__excerpt {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            @include respond(tablet) {
+                font-size: 1.6rem;
+            }
+        }
+
+        .btn--read-more {
+            align-self: flex-start;
+            padding: 1.5rem 3.5rem;
+            background-color: $color-secondary;
+            color: $color-white;
+            border-radius: 1rem;
+            font-weight: 700;
+            font-size: 1.6rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: darken($color-secondary, 5%);
+                transform: scale(1.05);
+                box-shadow: 0 1rem 2rem rgba($color-secondary, 0.2);
+            }
+        }
+
+        @include respond(mobile) {
+            flex-direction: column;
+
+            .blog__img-box {
+                flex: 0 0 auto;
+                height: 25rem;
+            }
+
+            .blog__content {
+                padding: 3rem;
+            }
+        }
+    }
+}
+
+// Pagination
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 8rem;
+
+    &__item {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $color-gray-600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover:not(.active) {
+            background-color: $color-gray-100;
+            color: $color-primary;
+        }
+
+        &.active {
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+
+        i {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// Blog Hero Section
+.hero-blog {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; // For parallax effect
+    padding: 22rem 0 12rem;
+    color: #fff;
+    margin-top: 0;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
+        z-index: 1;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+
+            a {
+                color: inherit;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            i {
+                font-size: 1.2rem;
+                opacity: 0.6;
+            }
+
+            span {
+                color: #fff;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-size: 6.4rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+
+        @include respond(tablet) {
+            font-size: 4.8rem;
+        }
+
+        @include respond(mobile) {
+            font-size: 3.6rem;
+        }
+    }
+}
+// Reveal Animations
+.reveal-left, .reveal-right {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left {
+    transform: translateX(-5rem);
+}
+
+.reveal-right {
+    transform: translateX(5rem);
+}
+
+.reveal-left.active, .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
 }

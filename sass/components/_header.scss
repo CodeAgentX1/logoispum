@@ -13,6 +13,7 @@
 
     &--transparent:not(.scrolled) {
         background: transparent !important;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent) !important; // Initial background image/gradient
         box-shadow: none !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
@@ -79,11 +80,89 @@
         }
     }
 
+    &--blog:not(.scrolled) {
+        .nav-list__link {
+            color: #fff !important;
+        }
+
+        .header__logo .logo-text {
+            color: #fff !important;
+        }
+
+        .btn--outline {
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            color: #fff !important;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1) !important;
+                border-color: #fff !important;
+            }
+        }
+
+        .dropdown-toggle i {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        .search-bar {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+            &__input {
+                color: #fff !important;
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.6) !important;
+                }
+            }
+
+            &__btn {
+                color: rgba(255, 255, 255, 0.7) !important;
+            }
+        }
+    }
+
     &.scrolled {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(1rem);
+        background-color: rgba(255, 255, 255, 0.98);
+        background-image: none !important; // Remove background as per user request
         height: 7rem;
-        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(1.5rem);
+
+        .nav-list__link {
+            color: $color-primary !important;
+        }
+
+        .header__logo .logo-text {
+            color: $color-primary !important;
+        }
+
+        .header__logo svg path {
+            fill: $color-primary !important;
+        }
+
+        .btn--outline {
+            border-color: $color-gray-200 !important;
+            color: $color-primary !important;
+
+            &:hover {
+                background: $color-gray-50 !important;
+            }
+        }
+
+        .search-bar {
+            background: $color-gray-100 !important;
+            border: 1px solid transparent !important;
+
+            &__input {
+                color: $color-primary !important;
+                &::placeholder {
+                    color: $color-gray-400 !important;
+                }
+            }
+
+            &__btn {
+                color: $color-gray-500 !important;
+            }
+        }
     }
 
     &__container {
