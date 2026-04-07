@@ -23,7 +23,7 @@
                         <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#1E293B"/>
                         <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#1E293B"/>
                         <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#1E293B"/>
-                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B">logoipsum</text>
+                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B" class="logo-text">logoipsum</text>
                     </svg>
                 </a>
             </div>
@@ -37,6 +37,9 @@
 
             <nav class="header__nav" id="main-nav">
                 <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="../index.html" class="nav-list__link">Home</a>
+                    </li>
                     <li class="nav-list__item dropdown">
                         <a href="#" class="nav-list__link dropdown-toggle">Category <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -56,9 +59,14 @@
                 </div>
             </nav>
 
-            <div class="header__auth">
-                <button class="btn btn--outline" id="login-btn">Login</button>
-                <button class="btn btn--primary" id="signup-btn">Sign Up</button>
+            <div class="header__user">
+                <div class="user-profile">
+                    <div class="user-profile__avatar">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop" alt="User Avatar">
+                    </div>
+                    <span class="user-profile__email">Romadhon@gmail.com</span>
+                    <i class="fa-solid fa-chevron-down user-profile__icon"></i>
+                </div>
             </div>
 
             <button class="header__toggle" id="menu-toggle" aria-label="Toggle Menu">

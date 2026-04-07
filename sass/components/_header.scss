@@ -13,7 +13,6 @@
 
     &--transparent:not(.scrolled) {
         background: transparent !important;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent) !important; // Initial background image/gradient
         box-shadow: none !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
@@ -25,8 +24,9 @@
             }
         }
 
-        .header__logo .logo-text {
-            color: #fff !important;
+        .header__logo svg path,
+        .header__logo svg text {
+            fill: #FFFFFF !important;
         }
 
         .btn--outline {
@@ -80,94 +80,16 @@
         }
     }
 
-    &--blog:not(.scrolled) {
-        .nav-list__link {
-            color: #fff !important;
-        }
-
-        .header__logo .logo-text {
-            color: #fff !important;
-        }
-
-        .btn--outline {
-            border-color: rgba(255, 255, 255, 0.4) !important;
-            color: #fff !important;
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.1) !important;
-                border-color: #fff !important;
-            }
-        }
-
-        .dropdown-toggle i {
-            color: rgba(255, 255, 255, 0.7) !important;
-        }
-
-        .search-bar {
-            background: rgba(255, 255, 255, 0.1) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
-
-            &__input {
-                color: #fff !important;
-                &::placeholder {
-                    color: rgba(255, 255, 255, 0.6) !important;
-                }
-            }
-
-            &__btn {
-                color: rgba(255, 255, 255, 0.7) !important;
-            }
-        }
-    }
-
     &.scrolled {
-        background-color: rgba(255, 255, 255, 0.98);
-        background-image: none !important; // Remove background as per user request
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(1rem);
         height: 7rem;
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(1.5rem);
-
-        .nav-list__link {
-            color: $color-primary !important;
-        }
-
-        .header__logo .logo-text {
-            color: $color-primary !important;
-        }
-
-        .header__logo svg path {
-            fill: $color-primary !important;
-        }
-
-        .btn--outline {
-            border-color: $color-gray-200 !important;
-            color: $color-primary !important;
-
-            &:hover {
-                background: $color-gray-50 !important;
-            }
-        }
-
-        .search-bar {
-            background: $color-gray-100 !important;
-            border: 1px solid transparent !important;
-
-            &__input {
-                color: $color-primary !important;
-                &::placeholder {
-                    color: $color-gray-400 !important;
-                }
-            }
-
-            &__btn {
-                color: $color-gray-500 !important;
-            }
-        }
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
     }
 
     &__container {
         width: 100%;
-        max-width: 120rem; // Unified container width
+        max-width: 120rem;
         margin: 0 auto;
         padding: 0 2rem;
         display: flex;
@@ -250,6 +172,16 @@
         display: flex;
         align-items: center;
         gap: 1.5rem;
+        margin-left: 2rem;
+
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
         margin-left: 2rem;
 
         @include respond(tablet) {
@@ -386,7 +318,7 @@
     &__link {
         font-size: 1.6rem;
         font-weight: 600;
-        color: #2D3E50; // Exact color from image
+        color: #2D3E50;
         transition: $transition-fast;
         display: flex;
         align-items: center;
@@ -398,6 +330,52 @@
 
         &:hover {
             color: $color-secondary;
+        }
+    }
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 10rem;
+    transition: $transition-fast;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .user-profile {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        cursor: pointer;
+
+        &__name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $color-primary;
+            
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &__avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            box-shadow: $shadow-sm;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }

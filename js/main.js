@@ -5,12 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sticky Header on Scroll
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 80) {
-            header.classList.add('scrolled');
-            header.classList.add('header--scrolled');
+        if (window.scrollY > 20) {
+            if (!header.classList.contains('scrolled')) {
+                console.log('Header scrolled - adding class');
+                header.classList.add('scrolled');
+                header.classList.add('header--scrolled');
+            }
         } else {
-            header.classList.remove('scrolled');
-            header.classList.remove('header--scrolled');
+            if (header.classList.contains('scrolled')) {
+                console.log('Header at top - removing class');
+                header.classList.remove('scrolled');
+                header.classList.remove('header--scrolled');
+            }
         }
     });
 
@@ -99,15 +105,60 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // Modal Logic
+    // --- Auth & Profile Persistence ---
     const authModal = document.getElementById('auth-modal');
+    const headerUser = document.getElementById('header-user');
+    const headerAuth = document.querySelector('.header__auth');
+    const headerUsername = document.getElementById('header-username');
+    const headerAvatar = document.getElementById('header-avatar');
+    
+    const signinForm = document.getElementById('signin-form');
+    const loginForm = document.getElementById('login-form');
+    const loginAvatarInput = document.getElementById('login-avatar');
+    const avatarPreview = document.getElementById('avatar-preview');
+
+    const updateHeaderUI = (user) => {
+        if (user) {
+            if (headerAuth) headerAuth.style.display = 'none';
+            if (headerUser) headerUser.style.display = 'flex';
+            if (headerUsername) headerUsername.textContent = user.username;
+            if (headerAvatar) headerAvatar.src = user.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop';
+            
+            // On Account Page, update the large profile too
+            const accountName = document.querySelector('.account-profile__name');
+            const accountAvatar = document.querySelector('.account-profile__avatar img');
+            if (accountName) accountName.textContent = user.username;
+            if (accountAvatar && user.avatar) accountAvatar.src = user.avatar;
+        } else {
+            if (headerAuth) headerAuth.style.display = 'flex';
+            if (headerUser) headerUser.style.display = 'none';
+        }
+
+        // Specific rule: Hide auth buttons on account page even if logged out
+        if (window.location.pathname.includes('account.html')) {
+            if (headerAuth) headerAuth.style.display = 'none';
+        }
+    };
+
+    const checkAuthState = () => {
+        const savedUser = localStorage.getItem('user');
+        if (savedUser) {
+            updateHeaderUI(JSON.parse(savedUser));
+        } else {
+            updateHeaderUI(null);
+        }
+    };
+
+    checkAuthState();
+
+    // Modal Logic
     const loginBtn = document.getElementById('login-btn');
     const signupBtn = document.getElementById('signup-btn');
     const modalClose = document.getElementById('modal-close');
     const modalTabs = document.querySelectorAll('.modal__tab');
     const modalForms = document.querySelectorAll('.modal__form');
 
-    const openModal = (tab = 'login') => {
+    const openModal = (tab = 'signin') => {
         if (!authModal) return;
         authModal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -129,26 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const loginBtnMobile = document.getElementById('login-btn-mobile');
-    const signupBtnMobile = document.getElementById('signup-btn-mobile');
-
-    if (loginBtn) loginBtn.addEventListener('click', () => openModal('login'));
-    if (signupBtn) signupBtn.addEventListener('click', () => openModal('signup'));
-    
-    const closeMobileMenu = () => {
-        menuToggle.classList.remove('active');
-        mainNav.classList.remove('active');
-        document.body.classList.remove('overflow-hidden');
-    };
-
-    if (loginBtnMobile) loginBtnMobile.addEventListener('click', () => {
-        closeMobileMenu();
-        openModal('login');
-    });
-    if (signupBtnMobile) signupBtnMobile.addEventListener('click', () => {
-        closeMobileMenu();
-        openModal('signup');
-    });
+    if (loginBtn) loginBtn.addEventListener('click', () => openModal('signin'));
+    if (signupBtn) signupBtn.addEventListener('click', () => openModal('login'));
 
     if (modalClose) modalClose.addEventListener('click', closeModal);
 
@@ -160,13 +193,67 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.addEventListener('click', () => switchTab(tab.dataset.tab));
     });
 
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && authModal && authModal.classList.contains('active')) {
-            closeModal();
+    // Form Submissions
+    signinForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('signin-email').value;
+        const user = { username: email.split('@')[0], email: email, avatar: null };
+        localStorage.setItem('user', JSON.stringify(user));
+        updateHeaderUI(user);
+        closeModal();
+    });
+
+    loginForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('login-username').value;
+        const email = document.getElementById('login-email').value;
+        const avatar = avatarPreview?.querySelector('img')?.src || null;
+        
+        const user = { username, email, avatar };
+        localStorage.setItem('user', JSON.stringify(user));
+        updateHeaderUI(user);
+        closeModal();
+    });
+
+    // Avatar Preview
+    loginAvatarInput?.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                if (avatarPreview) {
+                    avatarPreview.innerHTML = `<img src="${event.target.result}" alt="Preview">`;
+                    avatarPreview.style.display = 'block';
+                }
+            };
+            reader.readAsDataURL(file);
         }
     });
 
+    // --- Account Page Tab Switching ---
+    const accountTabs = document.querySelectorAll('.account-tabs__btn');
+    const courseGrid = document.querySelector('.course-grid');
+    
+    if (accountTabs.length > 0) {
+        accountTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Change Active state
+                accountTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // For demo: shuffle or hide/show content
+                if (courseGrid) {
+                    courseGrid.style.opacity = '0';
+                    setTimeout(() => {
+                        courseGrid.style.opacity = '1';
+                        // In a real app we would filter or fetch content here
+                    }, 300);
+                }
+            });
+        });
+    }
+
+    // --- Original Logic Restored Below ---
     // Course Filtering Logic
     const filterBtns = document.querySelectorAll('.courses__filter-btn');
     const courseCards = document.querySelectorAll('.course-card');
@@ -174,18 +261,13 @@ document.addEventListener('DOMContentLoaded', () => {
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.dataset.filter;
-
-            // Update active state of buttons
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // Filter cards with animation
             courseCards.forEach(card => {
                 const category = card.dataset.category;
-
                 if (filter === 'all' || category === filter) {
                     card.classList.remove('hidden');
-                    // Trigger reflow for animation
                     void card.offsetWidth;
                     card.classList.add('fade-in');
                 } else {
@@ -199,12 +281,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Stats Counter Animation
     const statsSection = document.querySelector('.stats');
     const counters = document.querySelectorAll('.stat-card__number');
-    const animationDuration = 2000; // 2 seconds
+    const animationDuration = 2000;
 
     const animateCounters = () => {
         counters.forEach(counter => {
             const target = +counter.dataset.target;
-            const step = target / (animationDuration / 16); // 60fps
+            const step = target / (animationDuration / 16);
             let count = 0;
 
             const updateCount = () => {
@@ -216,7 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     counter.innerText = target.toLocaleString() + (target > 1000 ? '+' : '');
                 }
             };
-
             updateCount();
         });
     };
@@ -239,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSlide = (n) => {
         slides.forEach(slide => slide.classList.remove('active'));
         currentSlide = (n + slides.length) % slides.length;
-        slides[currentSlide].classList.add('active');
+        if (slides[currentSlide]) slides[currentSlide].classList.add('active');
     };
 
     nextBtns.forEach(btn => {
@@ -338,17 +419,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = header.parentElement;
             const body = item?.querySelector('.accordion__body');
             const isActive = item?.classList.contains('active');
-
-            // Close all other items (optional, but usually preferred)
-            /*
-            document.querySelectorAll('.accordion__item').forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                    const otherBody = otherItem.querySelector('.accordion__body');
-                    if (otherBody) (otherBody as HTMLElement).style.display = 'none';
-                }
-            });
-            */
 
             if (isActive) {
                 item?.classList.remove('active');

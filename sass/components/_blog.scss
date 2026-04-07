@@ -109,7 +109,7 @@
     }
 
     &-card--horizontal {
-        display: flex;
+        display: flex !important;
         background-color: $color-white;
         border-radius: 2rem;
         overflow: hidden;
@@ -168,8 +168,8 @@
         .btn--read-more {
             align-self: flex-start;
             padding: 1.5rem 3.5rem;
-            background-color: $color-secondary;
-            color: $color-white;
+            background-color: $color-secondary !important;
+            color: $color-white !important;
             border-radius: 1rem;
             font-weight: 700;
             font-size: 1.6rem;
@@ -241,7 +241,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed; // For parallax effect
-    padding: 22rem 0 12rem;
+    padding: 16rem 0 10rem;
     color: #fff;
     margin-top: 0;
     overflow: hidden;

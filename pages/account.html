@@ -22,7 +22,7 @@
                         <path d="M11 26C8 26 5 24 5 21C5 18 8 16 11 16C17 16 23 20 23 26H11Z" fill="#1E293B"/>
                         <path d="M11 21C7 21 4 18 4 14C4 10 7 8 11 8C19 8 28 15 28 21H11Z" fill="#1E293B"/>
                         <path d="M11 16C6 16 2 12 2 7C2 2 6 0 11 0C22 0 34 10 34 16H11Z" fill="#1E293B"/>
-                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B">logoipsum</text>
+                        <text x="40" y="24" font-family="Outfit" font-size="24" font-weight="700" fill="#1E293B" class="logo-text">logoipsum</text>
                     </svg>
                 </a>
             </div>
@@ -36,6 +36,9 @@
 
             <nav class="header__nav" id="main-nav">
                 <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="../index.html" class="nav-list__link">Home</a>
+                    </li>
                     <li class="nav-list__item dropdown">
                         <a href="#" class="nav-list__link dropdown-toggle">Category <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -56,8 +59,17 @@
             </nav>
 
             <div class="header__auth">
-                <button class="btn btn--outline" id="login-btn">Login</button>
-                <button class="btn btn--primary" id="signup-btn">Sign Up</button>
+                <button class="btn btn--outline" id="login-btn">Sign In</button>
+                <button class="btn btn--primary" id="signup-btn">Log In</button>
+            </div>
+
+            <div class="header__user" id="header-user" style="display: none;">
+                <div class="user-profile">
+                    <span class="user-profile__name" id="header-username"></span>
+                    <div class="user-profile__avatar">
+                        <img src="" alt="User Avatar" id="header-avatar">
+                    </div>
+                </div>
             </div>
 
             <button class="header__toggle" id="menu-toggle" aria-label="Toggle Menu">
@@ -66,13 +78,372 @@
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <section style="padding: 10rem 0; text-align: center;">
-                <h1 style="font-size: 4rem; margin-bottom: 2rem;">My Account</h1>
-                <p style="font-size: 1.8rem; color: #666;">User profile and account settings will be here.</p>
-            </section>
-        </div>
+    <main class="account-page">
+        <section class="account-profile">
+            <div class="container">
+                <div class="account-profile__header">
+                    <div class="account-profile__avatar">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop" alt="Profile Image">
+                    </div>
+                    <div class="account-profile__details">
+                        <h1 class="account-profile__name">Romadhona Syarifuddin</h1>
+                        <p class="account-profile__role">Full Stack Web Designer</p>
+                    </div>
+                </div>
+
+                <nav class="account-tabs">
+                    <button class="account-tabs__btn active">My Courses</button>
+                    <button class="account-tabs__btn">Wishlist</button>
+                    <button class="account-tabs__btn">My Certificate</button>
+                </nav>
+            </div>
+        </section>
+
+        <section class="account-content">
+            <div class="container">
+                <div class="course-grid">
+                    <!-- Row 1 -->
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=2070&auto=format&fit=crop" alt="UI/UX Design" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">UI/UX Design</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Interpersonal Skills - Work Better With Others!</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$384</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Web Developer" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Web Developer</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">How To Become An Expert Web Developer</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$735</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=2071&auto=format&fit=crop" alt="UX Research" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">UX Research</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">User Experience Design Essentials</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$826</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=1964&auto=format&fit=crop" alt="3D Design" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">3D Design</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Creating 3D Modelling In Blender</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(2078)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$640</span>
+                                <span class="course-card__new-price">$710</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="Marketing" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Marketing</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Social Media Marketing Masterclass</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(1850)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$520</span>
+                                <span class="course-card__new-price">$299</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Data Science" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Data Science</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Python for Data Science and Machine Learning</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(3120)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$850</span>
+                                <span class="course-card__new-price">$450</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" alt="Business" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Business</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">The Complete Business Strategy Course</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(2400)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$720</span>
+                                <span class="course-card__new-price">$395</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" alt="Design" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Design</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Adobe Illustrator CC - Essentials Training</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(1560)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$480</span>
+                                <span class="course-card__new-price">$180</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" alt="Tech" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Technology</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Advanced Web Technologies in 2024</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(1200)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$550</span>
+                                <span class="course-card__new-price">$320</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="UI" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Design</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Mobile App Design with Figma</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(980)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$400</span>
+                                <span class="course-card__new-price">$250</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" alt="Coding" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Coding</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">React Native - Build Mobile Apps</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(1550)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$700</span>
+                                <span class="course-card__new-price">$450</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" alt="Data" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Data Analysis</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Data Visualization Masterclass</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(850)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$600</span>
+                                <span class="course-card__new-price">$380</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" alt="Marketing" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Marketing</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Digital Marketing Analytics</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(1100)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$450</span>
+                                <span class="course-card__new-price">$280</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="UX" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">UX Design</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">User Research Methods</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(920)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$480</span>
+                                <span class="course-card__new-price">$310</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" alt="Frontend" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">Frontend</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Vue.js 3 Composition API</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(1400)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$620</span>
+                                <span class="course-card__new-price">$399</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card reveal-up">
+                        <div class="course-card__image-box">
+                            <div class="course-card__img-container">
+                                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" alt="AI" class="course-card__img">
+                            </div>
+                            <span class="course-card__badge">AI</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h3 class="course-card__title">Introduction to Machine Learning</h3>
+                            <p class="course-card__author">Tanah Air Team</p>
+                            <div class="course-card__rating">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="count">(2100)</span>
+                            </div>
+                            <div class="course-card__price-row">
+                                <span class="course-card__old-price">$800</span>
+                                <span class="course-card__new-price">$499</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -138,45 +509,39 @@
         <div class="modal">
             <button class="modal__close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal__header">
-                <button class="modal__tab active" data-tab="login">Login</button>
-                <button class="modal__tab" data-tab="signup">Sign Up</button>
+                <button class="modal__tab active" data-tab="signin">Sign In</button>
+                <button class="modal__tab" data-tab="login">Log In</button>
             </div>
             <div class="modal__content">
-                <!-- Login Form -->
-                <form class="modal__form active" id="login-form">
+                <!-- Sign In Form (Email, Password) -->
+                <form class="modal__form active" id="signin-form">
+                    <div class="form-group">
+                        <label for="signin-email">Email Address</label>
+                        <input type="email" id="signin-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Sign In</button>
+                </form>
+
+                <!-- Log In Form (Username, Email, Profile Image) -->
+                <form class="modal__form" id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" placeholder="Enter username" required>
+                    </div>
                     <div class="form-group">
                         <label for="login-email">Email Address</label>
                         <input type="email" id="login-email" placeholder="Enter your email" required>
                     </div>
                     <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                        <label for="login-avatar">Profile Image</label>
+                        <input type="file" id="login-avatar" accept="image/*" class="form-control-file">
+                        <div class="avatar-preview" id="avatar-preview"></div>
                     </div>
-                    <div class="form-options">
-                        <label class="checkbox-container">
-                            <input type="checkbox"> Remember me
-                            <span class="checkmark"></span>
-                        </label>
-                        <a href="#" class="forgot-link">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full">Login to Account</button>
-                </form>
-
-                <!-- Sign Up Form -->
-                <form class="modal__form" id="signup-form">
-                    <div class="form-group">
-                        <label for="signup-name">Full Name</label>
-                        <input type="text" id="signup-name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signup-email">Email Address</label>
-                        <input type="email" id="signup-email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signup-password">Password</label>
-                        <input type="password" id="signup-password" placeholder="Create a password" required>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+                    <button type="submit" class="btn btn--primary btn--full">Log In</button>
                 </form>
             </div>
             <div class="modal__footer">
